@@ -1,0 +1,546 @@
+﻿<Page x:Class="GCISApp.InstanciasPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GCISApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="1200"
+      Title="InstanciasPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="80"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ToolBarTray Grid.Column="0" Orientation="Vertical">
+            <ToolBar Margin="3">
+                <Button x:Name="BtnMaestros" Width="70" Height="85" Click="BtnMaestros_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Maestros.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Maestros</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnServidores" Width="70" Height="85" Click="BtnServidores_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Servidores.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Servidores</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnInstancias" Width="70" Height="85" Click="BtnInstancias_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Instancias.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Instancias</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnDatabases" Width="70" Height="85" Click="BtnDatabases_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Database.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Databases</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnSoluciones" Width="70" Height="85" Click="BtnSoluciones_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Soluciones.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Soluciones</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnSAN" Width="70" Height="85" Click="BtnSAN_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Discos.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">SAN</TextBlock>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <Border CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="500" Width="800" Background="White" Grid.Column="1">
+            <Border.Effect>
+                <DropShadowEffect Color="DarkBlue"/>
+            </Border.Effect>
+        </Border>
+        <TabControl x:Name="TabInstancias" Width="775" Height="475" BorderBrush="{x:Null}" Grid.Column="1" Loaded="TabInstancias_Loaded">
+            <TabItem Header="R" Visibility="Collapsed">
+                <StackPanel Width="765" Height="845">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Instancias de Aplicación</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Instancia:</TextBlock>
+                    <TextBox x:Name="TxtID" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidor"></TextBox>
+                    <Grid Height="45" Width="765">
+                        <Button x:Name="BtnSelect" Margin="10" Click="BtnSelect_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Buscar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Select</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <DataGrid x:Name="DgInstancia" Height="250"></DataGrid>
+                    <Grid Height="45" Width="765">
+                        <Button x:Name="BtnEditar" Margin="10" Click="BtnEditar_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Editar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Edicion" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Instancias de Aplicación - Edición</TextBlock>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="10"></ColumnDefinition>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">ID Instancia:</TextBlock>
+                        <TextBox x:Name="TxtIDE" Grid.Column="1" Grid.Row="0" IsEnabled="False"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="0">Nombre Instancia:</TextBlock>
+                        <TextBox x:Name="TxtNombreInstanciaE" Grid.Column="4" Grid.Row="0"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="1"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="2">ID Servidor:</TextBlock>
+                        <TextBox x:Name="TxtIDServidorE" Grid.Column="1" Grid.Row="2" IsEnabled="False"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="2">Nombre Servidor:</TextBlock>
+                        <TextBox x:Name="TxtNombreServidorE" Grid.Column="4" Grid.Row="2" IsEnabled="False"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="3"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="4">Ambiente:</TextBlock>
+                        <ComboBox x:Name="CmbAmbienteE" Grid.Column="1" Grid.Row="4"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="5"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="6">Proveedor:</TextBlock>
+                        <ComboBox x:Name="CmbProveedorE" Grid.Column="1" Grid.Row="6" SelectionChanged="CmbProveedorE_SelectionChanged"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="6">Aplicación:</TextBlock>
+                        <ComboBox x:Name="CmbAplicacionE" Grid.Column="4" Grid.Row="6"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="7"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="8">Usuario Admin:</TextBlock>
+                        <TextBox x:Name="TxtUsuarioE" Grid.Column="1" Grid.Row="8"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="8">Password Admin:</TextBlock>
+                        <PasswordBox x:Name="TxtPasswordE" Grid.Column="4" Grid.Row="8"></PasswordBox>
+                        <TextBox x:Name="VerPasswordE" Grid.Column="4" Grid.Row="8" Visibility="Collapsed"></TextBox>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <TabControl x:Name="TabEdicion" Height="200">
+                        <TabItem Header="Usuarios">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgUsuarios" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewUsuario" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnNewUsuario_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditUsuario" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditUsuario_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Plan de Mantenimiento">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgMaintenance" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewMantenimiento" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnNewMantenimiento_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditMantenimiento" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditMantenimiento_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Bases de Datos">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgDatabase" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewDB" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnNewDB_Click" IsEnabled="True">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditDB" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditDB_Click" IsEnabled="True">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <Grid Height="40" Width="765">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackE" Margin="5" Grid.Column="0" Click="BtnBackE_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarE" Margin="5" Grid.Column="1" Click="BtnGuardarE_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnBorrarE" Margin="5" Grid.Column="2" Click="BtnBorrarE_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Usuarios" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Instancia Aplicación - Edición - Usuarios</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Usuario:</TextBlock>
+                    <TextBox x:Name="TxtIDUsuarioU" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Instancia:</TextBlock>
+                    <TextBox x:Name="TxtIDInstanciaU" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Instancia:</TextBlock>
+                    <TextBox x:Name="TxtNombreInstanciaU" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Usuario:</TextBlock>
+                    <TextBox x:Name="TxtUsuarioU"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Password:</TextBlock>
+                    <PasswordBox x:Name="TxtPasswordU"></PasswordBox>
+                    <TextBox x:Name="VerPasswordU" Visibility="Collapsed"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewUsuario" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackUsuarios" Margin="5" Grid.Column="0" Click="BtnBackUsuarios_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarUsuarios" Margin="5" Grid.Column="1" Click="BtnGuardarUsuarios_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditUsuario" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0"  Click="BtnBackUsuarios_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateUsuarios" Margin="5" Grid.Column="1" Click="BtnUpdateUsuarios_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnBorrarUsuarios" Margin="5" Grid.Column="2" Click="BtnBorrarUsuarios_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="MaintenancePlan" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Instancia de Aplicación - Edición - Mantenimiento</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Plan de Mantenimiento:</TextBlock>
+                    <TextBox x:Name="TxtIDMaintenanceM" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Instancia:</TextBlock>
+                    <TextBox x:Name="TxtIDInstanciaM" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Instancia:</TextBlock>
+                    <TextBox x:Name="TxtNombreInstanciaM" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Plan de Mantenimiento:</TextBlock>
+                    <TextBox x:Name="TxtNombreMaintenanceM"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción Plan de Mantenimiento:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionMaintenanceM"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Día de la Semana:</TextBlock>
+                    <Grid Height="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox x:Name="chkLunes" Grid.Column="0" VerticalAlignment="Center">Lunes</CheckBox>
+                        <CheckBox x:Name="chkMartes" Grid.Column="1" VerticalAlignment="Center">Martes</CheckBox>
+                        <CheckBox x:Name="chkMiercoles" Grid.Column="2" VerticalAlignment="Center">Miércoles</CheckBox>
+                        <CheckBox x:Name="chkJueves" Grid.Column="3" VerticalAlignment="Center">Jueves</CheckBox>
+                        <CheckBox x:Name="chkViernes" Grid.Column="4" VerticalAlignment="Center">Viernes</CheckBox>
+                        <CheckBox x:Name="chkSabado" Grid.Column="5" VerticalAlignment="Center">Sábado</CheckBox>
+                        <CheckBox x:Name="chkDomingo" Grid.Column="6" VerticalAlignment="Center">Domingo</CheckBox>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0">Hora:</TextBlock>
+                        <ComboBox Grid.Column="1" x:Name="cmbHora">
+                            <ComboBoxItem>00</ComboBoxItem>
+                            <ComboBoxItem>01</ComboBoxItem>
+                            <ComboBoxItem>02</ComboBoxItem>
+                            <ComboBoxItem>03</ComboBoxItem>
+                            <ComboBoxItem>04</ComboBoxItem>
+                            <ComboBoxItem>05</ComboBoxItem>
+                            <ComboBoxItem>06</ComboBoxItem>
+                            <ComboBoxItem>07</ComboBoxItem>
+                            <ComboBoxItem>08</ComboBoxItem>
+                            <ComboBoxItem>09</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>11</ComboBoxItem>
+                            <ComboBoxItem>12</ComboBoxItem>
+                            <ComboBoxItem>13</ComboBoxItem>
+                            <ComboBoxItem>14</ComboBoxItem>
+                            <ComboBoxItem>15</ComboBoxItem>
+                            <ComboBoxItem>16</ComboBoxItem>
+                            <ComboBoxItem>17</ComboBoxItem>
+                            <ComboBoxItem>18</ComboBoxItem>
+                            <ComboBoxItem>19</ComboBoxItem>
+                            <ComboBoxItem>20</ComboBoxItem>
+                            <ComboBoxItem>21</ComboBoxItem>
+                            <ComboBoxItem>22</ComboBoxItem>
+                            <ComboBoxItem>23</ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Grid.Column="3">Minutos:</TextBlock>
+                        <ComboBox Grid.Column="4" x:Name="cmbMinuto">
+                            <ComboBoxItem>00</ComboBoxItem>
+                            <ComboBoxItem>01</ComboBoxItem>
+                            <ComboBoxItem>02</ComboBoxItem>
+                            <ComboBoxItem>03</ComboBoxItem>
+                            <ComboBoxItem>04</ComboBoxItem>
+                            <ComboBoxItem>05</ComboBoxItem>
+                            <ComboBoxItem>06</ComboBoxItem>
+                            <ComboBoxItem>07</ComboBoxItem>
+                            <ComboBoxItem>08</ComboBoxItem>
+                            <ComboBoxItem>09</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>11</ComboBoxItem>
+                            <ComboBoxItem>12</ComboBoxItem>
+                            <ComboBoxItem>13</ComboBoxItem>
+                            <ComboBoxItem>14</ComboBoxItem>
+                            <ComboBoxItem>15</ComboBoxItem>
+                            <ComboBoxItem>16</ComboBoxItem>
+                            <ComboBoxItem>17</ComboBoxItem>
+                            <ComboBoxItem>18</ComboBoxItem>
+                            <ComboBoxItem>19</ComboBoxItem>
+                            <ComboBoxItem>20</ComboBoxItem>
+                            <ComboBoxItem>21</ComboBoxItem>
+                            <ComboBoxItem>22</ComboBoxItem>
+                            <ComboBoxItem>23</ComboBoxItem>
+                            <ComboBoxItem>24</ComboBoxItem>
+                            <ComboBoxItem>25</ComboBoxItem>
+                            <ComboBoxItem>26</ComboBoxItem>
+                            <ComboBoxItem>27</ComboBoxItem>
+                            <ComboBoxItem>28</ComboBoxItem>
+                            <ComboBoxItem>29</ComboBoxItem>
+                            <ComboBoxItem>30</ComboBoxItem>
+                            <ComboBoxItem>31</ComboBoxItem>
+                            <ComboBoxItem>32</ComboBoxItem>
+                            <ComboBoxItem>33</ComboBoxItem>
+                            <ComboBoxItem>34</ComboBoxItem>
+                            <ComboBoxItem>35</ComboBoxItem>
+                            <ComboBoxItem>36</ComboBoxItem>
+                            <ComboBoxItem>37</ComboBoxItem>
+                            <ComboBoxItem>38</ComboBoxItem>
+                            <ComboBoxItem>39</ComboBoxItem>
+                            <ComboBoxItem>40</ComboBoxItem>
+                            <ComboBoxItem>41</ComboBoxItem>
+                            <ComboBoxItem>42</ComboBoxItem>
+                            <ComboBoxItem>43</ComboBoxItem>
+                            <ComboBoxItem>44</ComboBoxItem>
+                            <ComboBoxItem>45</ComboBoxItem>
+                            <ComboBoxItem>46</ComboBoxItem>
+                            <ComboBoxItem>47</ComboBoxItem>
+                            <ComboBoxItem>48</ComboBoxItem>
+                            <ComboBoxItem>49</ComboBoxItem>
+                            <ComboBoxItem>50</ComboBoxItem>
+                            <ComboBoxItem>51</ComboBoxItem>
+                            <ComboBoxItem>52</ComboBoxItem>
+                            <ComboBoxItem>53</ComboBoxItem>
+                            <ComboBoxItem>54</ComboBoxItem>
+                            <ComboBoxItem>55</ComboBoxItem>
+                            <ComboBoxItem>56</ComboBoxItem>
+                            <ComboBoxItem>57</ComboBoxItem>
+                            <ComboBoxItem>58</ComboBoxItem>
+                            <ComboBoxItem>59</ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewMaintenancePlan" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackUsuarios_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarMaintenance"  Margin="5" Grid.Column="1" Click="BtnGuardarMaintenance_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditMaintenancePlan" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackUsuarios_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateMaintenance" Margin="5" Grid.Column="1" Click="BtnUpdateMaintenance_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteMaintenance" Margin="5" Grid.Column="2" Click="BtnDeleteMaintenance_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Database" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Instancia Aplicación - Edición - Base de Datos</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Base de Datos:</TextBlock>
+                    <TextBox x:Name="TxtIDDatabaseD" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Instancia:</TextBlock>
+                    <TextBox x:Name="TxtIDInstanciaD" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Instancia:</TextBlock>
+                    <TextBox x:Name="TxtNombreInstanciaD" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Base de Datos:</TextBlock>
+                    <TextBox x:Name="TxtNombreDatabaseD"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionDatabaseD"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewDatabase" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackUsuarios_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarDatabase" Margin="5" Grid.Column="1" Click="BtnGuardarDatabase_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditDatabase" Height="40" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackUsuarios_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateDatabase" Margin="5" Grid.Column="1" Click="BtnUpdateDatabase_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteDatabase" Margin="5" Grid.Column="2" Click="BtnDeleteDatabase_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

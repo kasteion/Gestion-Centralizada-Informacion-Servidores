@@ -1,0 +1,1132 @@
+﻿<Page x:Class="GCISApp.FisicoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GCISApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="725" d:DesignWidth="800"
+      Title="FisicoPage">
+    <Grid>
+        <Border CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="725" Width="800" Background="White">
+            <Border.Effect>
+                <DropShadowEffect Color="DarkBlue"/>
+            </Border.Effect>
+        </Border>
+        <TabControl x:Name="TabFisico" Width="775" Height="700" BorderBrush="{x:Null}">
+            <TabItem Header="R" Visibility="Collapsed" Loaded="TabItem_Loaded">
+                <StackPanel Width="765" Height="845">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtID" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Servidor:</TextBlock>
+                    <TextBox x:Name="TxtServidor"></TextBox>
+                    <Grid Height="45" Width="765">
+                        <Button x:Name="BtnSelect" Margin="10" Click="BtnSelect_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Buscar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Select</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <DataGrid x:Name="DgServidor" Height="475"></DataGrid>
+                    <Grid Height="45" Width="765">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnNuevo" Margin="10" Grid.Column="0" Click="BtnNuevo_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Nuevo.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Nuevo</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnEditar" Margin="10" Grid.Column="1" Click="BtnEditar_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Editar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Nuevo" Visibility="Collapsed">
+                <StackPanel Width="765" Height="845">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Servidor Físico - Nuevo</TextBlock>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="10"></ColumnDefinition>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">ID Servidor:</TextBlock>
+                        <TextBox x:Name="TxtIDN" IsEnabled="False" Grid.Column="1" Grid.Row="0"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="0">Status Servidor:</TextBlock>
+                        <ComboBox x:Name="CmbStatusN"  Grid.Column="4" Grid.Row="0"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="1"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="2">Sistema Operativo:</TextBlock>
+                        <ComboBox x:Name="CmbSistemaOperativoN" Grid.Column="1" Grid.Row="2"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="2">Ambiente:</TextBlock>
+                        <ComboBox x:Name="CmbAmbienteN" Grid.Column="4" Grid.Row="2"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="3"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="4">Tipo Servidor:</TextBlock>
+                        <ComboBox x:Name="CmbTipoN" Grid.Column="1" Grid.Row="4"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="5"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="6">Nombre:</TextBlock>
+                        <TextBox x:Name="TxtNombreN" Grid.Column="1" Grid.Row="6"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="6">Descripción:</TextBlock>
+                        <TextBox x:Name="TxtDescripcionN" Grid.Column="4" Grid.Row="6"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="7"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="8">No. Procesadores:</TextBlock>
+                        <TextBox x:Name="TxtNoProcesadoresN" Grid.Column="1" Grid.Row="8" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="8">Ram:</TextBlock>
+                        <TextBox x:Name="TxtRamN" Grid.Column="4" Grid.Row="8" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="9"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="10">No. Ethernet:</TextBlock>
+                        <TextBox x:Name="TxtNoEthernetN" Grid.Column="1" Grid.Row="10" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="10">Team Ethernet:</TextBlock>
+                        <CheckBox x:Name="ChkTeamEthernetN" Grid.Column="4" Grid.Row="10"></CheckBox>
+                        <TextBlock Grid.Column="0" Grid.Row="11"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="12">Fecha Parches:</TextBlock>
+                        <DatePicker x:Name="DtFechaParchesN" Grid.Column="1" Grid.Row="12"></DatePicker>
+                        <TextBlock Grid.Column="3" Grid.Row="12">Marca:</TextBlock>
+                        <ComboBox x:Name="CmbMarcaN" Grid.Column="4" Grid.Row="12" SelectionChanged="CmbMarcaN_SelectionChanged"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="13"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="14">Modelo:</TextBlock>
+                        <ComboBox x:Name="CmbModeloN" Grid.Column="1" Grid.Row="14"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="14">Procesador:</TextBlock>
+                        <TextBox x:Name="TxtProcesadorN" Grid.Column="4" Grid.Row="14"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="15"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="16">Edificio:</TextBlock>
+                        <ComboBox x:Name="CmbEdificioN" Grid.Column="1" Grid.Row="16"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="16">Rack:</TextBlock>
+                        <ComboBox x:Name="CmbRackN" Grid.Column="4" Grid.Row="16"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="17"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="18">OU:</TextBlock>
+                        <TextBox x:Name="TxtOUN" Grid.Column="1" Grid.Row="18"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="18">Service Tag:</TextBlock>
+                        <TextBox x:Name="TxtServiceTagN" Grid.Column="4" Grid.Row="18"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="19"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="20">Fuentes Redundantes:</TextBlock>
+                        <CheckBox x:Name="ChkFuentesRedundantesN" Grid.Column="1" Grid.Row="20"></CheckBox>
+                        <TextBlock Grid.Column="0" Grid.Row="21"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="22">Fecha de compra:</TextBlock>
+                        <DatePicker x:Name="DtFechaCompraN" Grid.Column="1" Grid.Row="22"></DatePicker>
+                        <TextBlock Grid.Column="3" Grid.Row="22">Fin de garantía:</TextBlock>
+                        <DatePicker x:Name="DtFechaGarantiaN" Grid.Column="4" Grid.Row="22"></DatePicker>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <Grid Height="40" Width="765">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBack" Margin="5" Grid.Column="0" Click="BtnBack_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardar" Margin="5" Grid.Column="1" Click="BtnGuardar_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Editar" Visibility="Collapsed">
+                <StackPanel Width="765" Height="845">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Servidor Físico - Edición</TextBlock>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="10"></ColumnDefinition>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">ID Servidor:</TextBlock>
+                        <TextBox x:Name="TxtIDE" IsEnabled="False" Grid.Column="1" Grid.Row="0"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="0">Status Servidor:</TextBlock>
+                        <ComboBox x:Name="CmbStatusE" Grid.Column="4" Grid.Row="0"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="1"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="2">Sistema Operativo:</TextBlock>
+                        <ComboBox x:Name="CmbSistemaOperativoE" Grid.Column="1" Grid.Row="2"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="2">Ambiente:</TextBlock>
+                        <ComboBox x:Name="CmbAmbienteE" Grid.Column="4" Grid.Row="2"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="3"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="4">Tipo Servidor:</TextBlock>
+                        <ComboBox x:Name="CmbTipoE" Grid.Column="1" Grid.Row="4"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="5"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="6">Nombre:</TextBlock>
+                        <TextBox x:Name="TxtNombreE" Grid.Column="1" Grid.Row="6"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="6">Descripción:</TextBlock>
+                        <TextBox x:Name="TxtDescripcionE" Grid.Column="4" Grid.Row="6"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="7"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="8">No. Procesadores:</TextBlock>
+                        <TextBox x:Name="TxtNoProcesadoresE" Grid.Column="1" Grid.Row="8" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="8">Ram:</TextBlock>
+                        <TextBox x:Name="TxtRamE" Grid.Column="4" Grid.Row="8" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="9"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="10">No. Ethernet:</TextBlock>
+                        <TextBox x:Name="TxtNoEthernetE" Grid.Column="1" Grid.Row="10" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="10">Team Ethernet:</TextBlock>
+                        <CheckBox x:Name="ChkTeamEthernetE" Grid.Column="4" Grid.Row="10"></CheckBox>
+                        <TextBlock Grid.Column="0" Grid.Row="11"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="12">Fecha Parches:</TextBlock>
+                        <DatePicker x:Name="DtFechaParchesE" Grid.Column="1" Grid.Row="12"></DatePicker>
+                        <TextBlock Grid.Column="3" Grid.Row="12">Marca:</TextBlock>
+                        <ComboBox x:Name="CmbMarcaE" Grid.Column="4" Grid.Row="12" SelectionChanged="CmbMarcaE_SelectionChanged"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="13"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="14">Modelo:</TextBlock>
+                        <ComboBox x:Name="CmbModeloE" Grid.Column="1" Grid.Row="14"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="14">Procesador:</TextBlock>
+                        <TextBox x:Name="TxtProcesadorE" Grid.Column="4" Grid.Row="14"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="15"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="16">Edificio:</TextBlock>
+                        <ComboBox x:Name="CmbEdificioE" Grid.Column="1" Grid.Row="16"></ComboBox>
+                        <TextBlock Grid.Column="3" Grid.Row="16">Rack:</TextBlock>
+                        <ComboBox x:Name="CmbRackE" Grid.Column="4" Grid.Row="16"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="17"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="18">OU:</TextBlock>
+                        <TextBox x:Name="TxtOUE" Grid.Column="1" Grid.Row="18"></TextBox>
+                        <TextBlock Grid.Column="3" Grid.Row="18">Service Tag:</TextBlock>
+                        <TextBox x:Name="TxtServiceTagE" Grid.Column="4" Grid.Row="18"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="19"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="20">Fuentes Redundantes:</TextBlock>
+                        <CheckBox x:Name="ChkFuentesRedundantesE" Grid.Column="1" Grid.Row="20"></CheckBox>
+                        <TextBlock Grid.Column="0" Grid.Row="21"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="22">Fecha de compra:</TextBlock>
+                        <DatePicker x:Name="DtFechaCompraE" Grid.Column="1" Grid.Row="22"></DatePicker>
+                        <TextBlock Grid.Column="3" Grid.Row="22">Fin de garantía:</TextBlock>
+                        <DatePicker x:Name="DtFechaGarantiaE" Grid.Column="4" Grid.Row="22"></DatePicker>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <TabControl x:Name="TabEdicion" Height="150">
+                        <TabItem Header="Ethernet">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgEthernet" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewEthernet" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEthernet_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditEthernet" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditEthernet_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Redundancia">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgRedundancia" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewRedundancia" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnRedundancia_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditRedundancia" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditRedundancia_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Discos">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgDiscos" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewDiscos" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnDiscos_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditDiscos" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditDiscos_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Backup Exec Jobs">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgBackupExec" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewBackupExec" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnBackupExec_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditBackupExec" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditBackupExec_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Usuarios">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="Dgusuarios" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewUsuarios" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnUsuarios_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditUsuarios" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditUsuarios_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Webservices">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgWebServices" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnWebNewServices" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnWebServices_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditWebServices" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditWebServices_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Instancias de aplicación">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgInstancias" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewInstancias" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnInstancias_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditInstancias" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditInstancias_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Documentos asociados">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgDocumentos" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewDocumento" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnNewDocumento_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditDocumento" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditDocumento_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <Grid Height="40" Width="765">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackE" Margin="5" Grid.Column="0" Click="BtnBackE_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarE" Margin="5" Grid.Column="1" Click="BtnGuardarE_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnBorrarE" Margin="5" Grid.Column="2" Click="BtnBorrarE_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Ethernet" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Ethernet - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorEthernet" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorEthernet" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Dirección IP:</TextBlock>
+                    <TextBox x:Name="TxtDireccionIP"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock x:Name="TbNewDireccionIP">Dirección IP Nueva:</TextBlock>
+                    <TextBox x:Name="TxtNewDireccionIP"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewEthernet" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackEthernet" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarEthernet" Margin="5" Grid.Column="1" Click="BtnGuardarEthernet_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditEthernet" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateEthernet" Margin="5" Grid.Column="1" Click="BtnUpdateEthernet_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteEthernet" Margin="5" Grid.Column="2" Click="BtnDeleteEthernet_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Redundancia" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Redundancia - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorRedundancia" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorRedundancia" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Redundancias:</TextBlock>
+                    <ListBox x:Name="ListRedundancia" Height="150">
+                    </ListBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewRedundancia" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackRedundancia" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarRedundancia" Margin="5" Grid.Column="1" Click="BtnGuardarRedundancia_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditRedundancia" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteRedundancia" Margin="5" Grid.Column="2" Click="BtnDeleteRedundancia_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Discos" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Discos - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Disco:</TextBlock>
+                    <TextBox x:Name="TxtIDDisco" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorDisco" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorDisco" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Disco:</TextBlock>
+                    <TextBox x:Name="TxtNombreDisco"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Capacidad:</TextBlock>
+                    <TextBox x:Name="TxtCapacidad" PreviewTextInput="TxtNumber_PreviewTextInput"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>SAN:</TextBlock>
+                    <ComboBox x:Name="CmbSAN" SelectionChanged="CmbSAN_SelectionChanged"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Pool:</TextBlock>
+                    <ComboBox x:Name="CmbPool"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Volumen Compartido:</TextBlock>
+                    <TextBox x:Name="TxtVolumenCompartido"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewDisco" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackDisco" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarDisco" Margin="5" Grid.Column="1" Click="BtnGuardarDisco_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditDisco" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateDisco" Margin="5" Grid.Column="1" Click="BtnUpdateDisco_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteDisco" Margin="5" Grid.Column="2" Click="BtnDeleteDisco_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="BackupExecJobs" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Backup Exec Jobs - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Backup Job:</TextBlock>
+                    <TextBox x:Name="TxtIDBackupExecJobs" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorBackupExecJobs" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorBackupExecJobs" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Job:</TextBlock>
+                    <TextBox x:Name="TxtBackupExecJob"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción Job:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionBackupExecJob"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Día de la Semana:</TextBlock>
+                    <Grid Height="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox x:Name="chkLunes" Grid.Column="0" VerticalAlignment="Center">Lunes</CheckBox>
+                        <CheckBox x:Name="chkMartes" Grid.Column="1" VerticalAlignment="Center">Martes</CheckBox>
+                        <CheckBox x:Name="chkMiercoles" Grid.Column="2" VerticalAlignment="Center">Miércoles</CheckBox>
+                        <CheckBox x:Name="chkJueves" Grid.Column="3" VerticalAlignment="Center">Jueves</CheckBox>
+                        <CheckBox x:Name="chkViernes" Grid.Column="4" VerticalAlignment="Center">Viernes</CheckBox>
+                        <CheckBox x:Name="chkSabado" Grid.Column="5" VerticalAlignment="Center">Sábado</CheckBox>
+                        <CheckBox x:Name="chkDomingo" Grid.Column="6" VerticalAlignment="Center">Domingo</CheckBox>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0">Hora:</TextBlock>
+                        <ComboBox Grid.Column="1" x:Name="cmbHora">
+                            <ComboBoxItem>00</ComboBoxItem>
+                            <ComboBoxItem>01</ComboBoxItem>
+                            <ComboBoxItem>02</ComboBoxItem>
+                            <ComboBoxItem>03</ComboBoxItem>
+                            <ComboBoxItem>04</ComboBoxItem>
+                            <ComboBoxItem>05</ComboBoxItem>
+                            <ComboBoxItem>06</ComboBoxItem>
+                            <ComboBoxItem>07</ComboBoxItem>
+                            <ComboBoxItem>08</ComboBoxItem>
+                            <ComboBoxItem>09</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>11</ComboBoxItem>
+                            <ComboBoxItem>12</ComboBoxItem>
+                            <ComboBoxItem>13</ComboBoxItem>
+                            <ComboBoxItem>14</ComboBoxItem>
+                            <ComboBoxItem>15</ComboBoxItem>
+                            <ComboBoxItem>16</ComboBoxItem>
+                            <ComboBoxItem>17</ComboBoxItem>
+                            <ComboBoxItem>18</ComboBoxItem>
+                            <ComboBoxItem>19</ComboBoxItem>
+                            <ComboBoxItem>20</ComboBoxItem>
+                            <ComboBoxItem>21</ComboBoxItem>
+                            <ComboBoxItem>22</ComboBoxItem>
+                            <ComboBoxItem>23</ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Grid.Column="3">Minutos:</TextBlock>
+                        <ComboBox Grid.Column="4" x:Name="cmbMinuto">
+                            <ComboBoxItem>00</ComboBoxItem>
+                            <ComboBoxItem>01</ComboBoxItem>
+                            <ComboBoxItem>02</ComboBoxItem>
+                            <ComboBoxItem>03</ComboBoxItem>
+                            <ComboBoxItem>04</ComboBoxItem>
+                            <ComboBoxItem>05</ComboBoxItem>
+                            <ComboBoxItem>06</ComboBoxItem>
+                            <ComboBoxItem>07</ComboBoxItem>
+                            <ComboBoxItem>08</ComboBoxItem>
+                            <ComboBoxItem>09</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>11</ComboBoxItem>
+                            <ComboBoxItem>12</ComboBoxItem>
+                            <ComboBoxItem>13</ComboBoxItem>
+                            <ComboBoxItem>14</ComboBoxItem>
+                            <ComboBoxItem>15</ComboBoxItem>
+                            <ComboBoxItem>16</ComboBoxItem>
+                            <ComboBoxItem>17</ComboBoxItem>
+                            <ComboBoxItem>18</ComboBoxItem>
+                            <ComboBoxItem>19</ComboBoxItem>
+                            <ComboBoxItem>20</ComboBoxItem>
+                            <ComboBoxItem>21</ComboBoxItem>
+                            <ComboBoxItem>22</ComboBoxItem>
+                            <ComboBoxItem>23</ComboBoxItem>
+                            <ComboBoxItem>24</ComboBoxItem>
+                            <ComboBoxItem>25</ComboBoxItem>
+                            <ComboBoxItem>26</ComboBoxItem>
+                            <ComboBoxItem>27</ComboBoxItem>
+                            <ComboBoxItem>28</ComboBoxItem>
+                            <ComboBoxItem>29</ComboBoxItem>
+                            <ComboBoxItem>30</ComboBoxItem>
+                            <ComboBoxItem>31</ComboBoxItem>
+                            <ComboBoxItem>32</ComboBoxItem>
+                            <ComboBoxItem>33</ComboBoxItem>
+                            <ComboBoxItem>34</ComboBoxItem>
+                            <ComboBoxItem>35</ComboBoxItem>
+                            <ComboBoxItem>36</ComboBoxItem>
+                            <ComboBoxItem>37</ComboBoxItem>
+                            <ComboBoxItem>38</ComboBoxItem>
+                            <ComboBoxItem>39</ComboBoxItem>
+                            <ComboBoxItem>40</ComboBoxItem>
+                            <ComboBoxItem>41</ComboBoxItem>
+                            <ComboBoxItem>42</ComboBoxItem>
+                            <ComboBoxItem>43</ComboBoxItem>
+                            <ComboBoxItem>44</ComboBoxItem>
+                            <ComboBoxItem>45</ComboBoxItem>
+                            <ComboBoxItem>46</ComboBoxItem>
+                            <ComboBoxItem>47</ComboBoxItem>
+                            <ComboBoxItem>48</ComboBoxItem>
+                            <ComboBoxItem>49</ComboBoxItem>
+                            <ComboBoxItem>50</ComboBoxItem>
+                            <ComboBoxItem>51</ComboBoxItem>
+                            <ComboBoxItem>52</ComboBoxItem>
+                            <ComboBoxItem>53</ComboBoxItem>
+                            <ComboBoxItem>54</ComboBoxItem>
+                            <ComboBoxItem>55</ComboBoxItem>
+                            <ComboBoxItem>56</ComboBoxItem>
+                            <ComboBoxItem>57</ComboBoxItem>
+                            <ComboBoxItem>58</ComboBoxItem>
+                            <ComboBoxItem>59</ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewBackupExecJob" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackBackupExecJob" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarBackupExecJob" Margin="5" Grid.Column="1" Click="BtnGuardarBackupExec_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditBackupExecJob" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateBackupExecJob" Margin="5" Grid.Column="1" Click="BtnUpdateBackupExecJob_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteBackupExecJob" Margin="5" Grid.Column="2" Click="BtnDeleteBackupExecJob_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Usuarios" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Usuarios - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Usuario:</TextBlock>
+                    <TextBox x:Name="TxtIDUsuario" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorUsuario" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorUsuario" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Dominio:</TextBlock>
+                    <TextBox x:Name="TxtDominio"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Usuario:</TextBlock>
+                    <TextBox x:Name="TxtUsuario"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Password:</TextBlock>
+                    <PasswordBox x:Name="TxtPassword"></PasswordBox>
+                    <TextBox x:Name="VerPassword" Visibility="Collapsed"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción:</TextBlock>
+                    <TextBox x:Name="TxtDescripcion"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewUsuario" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackUsuario" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarUsuario" Margin="5" Grid.Column="1" Click="BtnGuardarUsuarios_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditUsuario" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateUsuario" Margin="5" Grid.Column="1" Click="BtnUpdateUsuario_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteUsuario" Margin="5" Grid.Column="2" Click="BtnDeleteUsuario_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="WebServices" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Webservice - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID WebService:</TextBlock>
+                    <TextBox x:Name="TxtIDWebService" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorWebService" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorWebService" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre WebService:</TextBlock>
+                    <TextBox x:Name="TxtNombreWebService"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Carpeta:</TextBlock>
+                    <TextBox x:Name="TxtCarpetaWebService"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>URL:</TextBlock>
+                    <TextBox x:Name="TxtUrlWebService"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0">Publicado:</TextBlock>
+                        <CheckBox x:Name="ChkPublicado" Grid.Column="1"></CheckBox>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <TextBlock>URL Externa:</TextBlock>
+                    <TextBox x:Name="TxtUrlExternaWebService"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewWebService" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackWebService" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarWebService" Margin="5" Grid.Column="1" Click="BtnGuardarWebService_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditWebService" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateWebService" Margin="5" Grid.Column="1" Click="BtnUpdateWebService_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteWebService" Margin="5" Grid.Column="2" Click="BtnDeleteWebService_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Instancias" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Instancia - Servidor Físico</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Instancia:</TextBlock>
+                    <TextBox x:Name="TxtIDInstancia" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorInstancia" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Servidor:</TextBlock>
+                    <TextBox x:Name="TxtNombreServidorInstancia" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Ambiente:</TextBlock>
+                    <ComboBox x:Name="CmbAmbienteInstancia"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Proveedor:</TextBlock>
+                    <ComboBox x:Name="CmbProveedorInstancia" SelectionChanged="CmbProveedorInstancia_SelectionChanged"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Aplicación:</TextBlock>
+                    <ComboBox x:Name="CmbAplicacionInstancia"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Instancia:</TextBlock>
+                    <TextBox x:Name="TxtInstancia"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Usuario Administrador:</TextBlock>
+                    <TextBox x:Name="TxtUsuarioInstancia"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Password:</TextBlock>
+                    <PasswordBox x:Name="TxtPasswordInstancia"></PasswordBox>
+                    <TextBox x:Name="VerPasswordInstancia" Visibility="Collapsed"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewInstancia" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackInstancia" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarInstancia" Margin="5" Grid.Column="1" Click="BtnGuardarInstancia_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditInstancia" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateInstancia" Margin="5" Grid.Column="1" Click="BtnUpdateInstancia_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteInstancia" Margin="5" Grid.Column="2" Click="BtnDeleteInstancia_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Documentos" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Documento - Servidor Virtual</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Documento:</TextBlock>
+                    <TextBox x:Name="TxtIDDocumento" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Servidor:</TextBlock>
+                    <TextBox x:Name="TxtIDServidorDocumento" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Documento:</TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="TxtDocumento" Grid.Column="0" IsEnabled="False"></TextBox>
+                        <Button x:Name="BtnAddDocumento" Grid.Column="1" Width="18" Margin="20,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAddDocumento_Click">
+                            <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                        </Button>
+                    </Grid>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre del Documento:</TextBlock>
+                    <TextBox x:Name="TxtNombreDocumento" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewDocumento" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackDocumento" Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarDocumento" Margin="5" Grid.Column="1" Click="BtnGuardarDocumento_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditDocumento" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackEthernet_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateDocumento" Margin="5" Grid.Column="1" Click="BtnUpdateDocumento_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteDocumento" Margin="5" Grid.Column="2" Click="BtnDeleteDocumento_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

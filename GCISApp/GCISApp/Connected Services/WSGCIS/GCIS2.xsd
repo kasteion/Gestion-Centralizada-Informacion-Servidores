@@ -1,0 +1,2639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFGCIS" />
+  <xs:element name="InsertSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Solucion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertSolucionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSolucion" type="xs:int" />
+        <xs:element minOccurs="0" name="Solucion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSolucionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSolucion" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSolucionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectStatusResult" nillable="true" type="q1:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectTipoResult" nillable="true" type="q2:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertTipoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTipoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteTipoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUrlAdministracionSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="San" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUrlAdministracionSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectUrlAdministracionSANResult" nillable="true" type="q3:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUrlAdministracionSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUrlAdministracionSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUrlAdministracionSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUrlAdministracionSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUrl" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUrlAdministracionSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUrlAdministracionSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUrlAdministracionSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUrl" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUrlAdministracionSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUrlAdministracionSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioIDServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioIDServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectUsuarioIDServerResult" nillable="true" type="q4:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectUsuarioResult" nillable="true" type="q5:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Dominio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Dominio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioInstancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InstanciaAplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioInstanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectUsuarioInstanciaResult" nillable="true" type="q6:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioInstancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioInstanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUsuarioInstanciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUsuarioInstancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUsuarioInstanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUsuarioInstanciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsuarioInstancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsuarioInstanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUsuarioInstanciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="San" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectUsuarioSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectUsuarioSANResult" nillable="true" type="q7:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUsuarioSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUsuarioSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUsuarioSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUsuarioSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsuarioSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUsuarioSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteUsuarioSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectWebServiceIDServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectWebServiceIDServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectWebServiceIDServerResult" nillable="true" type="q8:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectWebService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreWebService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectWebServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectWebServiceResult" nillable="true" type="q9:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertWebService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreWebService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Carpeta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PublicadoInternet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UrlExterna" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertWebServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertWebServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWebService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDWebService" type="xs:int" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreWebService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Carpeta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PublicadoInternet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UrlExterna" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWebServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateWebServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWebService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDWebService" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWebServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteWebServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPermisosUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPermisosUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectPermisosUsuariosResult" nillable="true" type="q10:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAcceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAccesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectAccesoResult" nillable="true" type="q11:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAmbiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ambiente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAmbienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectAmbienteResult" nillable="true" type="q12:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAmbiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ambiente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAmbienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertAmbienteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAmbiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Ambiente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAmbienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAmbienteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAmbiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAmbienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAmbienteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="Aplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectAplicacionResult" nillable="true" type="q13:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Aplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fabricante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Licencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertAplicacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Aplicacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fabricante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Licencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateAplicacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAplicacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBackupExecJobsIDServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBackupExecJobsIDServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectBackupExecJobsIDServerResult" nillable="true" type="q14:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBackupExecJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BackupJob" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBackupExecJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectBackupExecJobsResult" nillable="true" type="q15:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBackupExecJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="BackupExecJob" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiaSemana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBackupExecJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertBackupExecJobsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBackupExecJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="BackupExecJob" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiaSemana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBackupExecJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateBackupExecJobsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBackupExecJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBackupExecJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteBackupExecJobsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cluster" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectClusterResult" nillable="true" type="q16:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cluster" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDAplicacion" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertClusterResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDCluster" type="xs:int" />
+        <xs:element minOccurs="0" name="Cluster" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDAplicacion" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateClusterResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCluster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClusterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteClusterResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClusterServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cluster" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClusterServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectClusterServidorFisicoResult" nillable="true" type="q17:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertClusterServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidorFisico" type="xs:int" />
+        <xs:element minOccurs="0" name="IDCluster" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertClusterServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertClusterServidorFisicoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClusterServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidorFisico" type="xs:int" />
+        <xs:element minOccurs="0" name="IDCluster" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClusterServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateClusterServidorFisicoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClusterServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidorFisico" type="xs:int" />
+        <xs:element minOccurs="0" name="IDCluster" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClusterServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteClusterServidorFisicoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectContacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectContactoResult" nillable="true" type="q18:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertContacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Emergencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertContactoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Emergencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateContactoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteContacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteContactoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseIDInstancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseIDInstanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectDatabaseIDInstanciaResult" nillable="true" type="q19:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreDatabase" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectDatabaseResult" nillable="true" type="q20:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDatabaseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDatabaseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDatabaseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectDatabaseMantenimientoResult" nillable="true" type="q21:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDatabaseMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDPlanMantenimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDatabaseMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDatabaseMantenimientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatabaseMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDPlanMantenimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatabaseMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDatabaseMantenimientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDatabaseMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDPlanMantenimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDatabaseMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDatabaseMantenimientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DatabaseNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDatabaseUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectDatabaseUsuarioResult" nillable="true" type="q22:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDatabaseUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDatabaseUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDatabaseUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatabaseUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDatabaseUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDatabaseUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDatabaseUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDatabase" type="xs:int" />
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDatabaseUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDatabaseUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDisco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDiscoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectDiscoResult" nillable="true" type="q23:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDisco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Disco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Capacidad" type="xs:int" />
+        <xs:element minOccurs="0" name="IDPool" type="xs:int" />
+        <xs:element minOccurs="0" name="VolumenCompartido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDiscoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDiscoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDisco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDisco" type="xs:int" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Disco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Capacidad" type="xs:int" />
+        <xs:element minOccurs="0" name="IDPool" type="xs:int" />
+        <xs:element minOccurs="0" name="VolumenCompartido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDiscoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDiscoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDisco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDisco" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDiscoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDiscoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDocumentoServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectDocumentoServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectDocumentoServidorResult" nillable="true" type="q24:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDocumentoServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDocumentoServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertDocumentoServidorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentoServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDocumento" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentoServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDocumentoServidorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentoServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDDocumento" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentoServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDocumentoServidorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectEdificio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Edificio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectEdificioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectEdificioResult" nillable="true" type="q25:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertEdificio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Edificio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertEdificioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertEdificioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEdificio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Edificio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEdificioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEdificioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEdificio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEdificioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteEdificioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectEthernet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectEthernetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectEthernetResult" nillable="true" type="q26:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertEthernet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DireccionIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertEthernetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertEthernetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEthernet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DireccionIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="NewDireccionIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEthernetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEthernetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEthernet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DireccionIP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEthernetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteEthernetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInstanciaAplicacionIDServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInstanciaAplicacionIDServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectInstanciaAplicacionIDServerResult" nillable="true" type="q27:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInstanciaAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Instancia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectInstanciaAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectInstanciaAplicacionResult" nillable="true" type="q28:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertInstanciaAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDAmbiente" type="xs:int" />
+        <xs:element minOccurs="0" name="IDAplicacion" type="xs:int" />
+        <xs:element minOccurs="0" name="Instancia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertInstanciaAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertInstanciaAplicacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInstanciaAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDAmbiente" type="xs:int" />
+        <xs:element minOccurs="0" name="IDAplicacion" type="xs:int" />
+        <xs:element minOccurs="0" name="Instancia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInstanciaAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateInstanciaAplicacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInstanciaAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="UsuarioLog" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInstanciaAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteInstanciaAplicacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectMarcaResult" nillable="true" type="q29:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertMarcaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMarcaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteMarcaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectModeloByMarca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectModeloByMarcaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectModeloByMarcaResult" nillable="true" type="q30:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectModelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectModeloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectModeloResult" nillable="true" type="q31:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertModelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertModeloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertModeloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateModelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="IDMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateModeloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateModeloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteModelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteModeloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteModeloResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPlanMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreInstancia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPlanMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectPlanMantenimientoResult" nillable="true" type="q32:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPlanMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiaSemana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPlanMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertPlanMantenimientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlanMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPlanMantenimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="IDInstancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiaSemana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlanMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlanMantenimientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePlanMantenimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPlanMantenimiento" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePlanMantenimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletePlanMantenimientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPoolBySan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="San" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPoolBySanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectPoolBySanResult" nillable="true" type="q33:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectPoolResult" nillable="true" type="q34:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Pool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertPoolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPool" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Pool" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePoolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPool" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePoolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletePoolResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProcesador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Like" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProcesadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectProcesadorResult" nillable="true" type="q35:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProcesador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="Procesador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProcesadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertProcesadorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProcesador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="IDMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="Procesador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProcesadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateProcesadorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProcesador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProcesadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteProcesadorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreProveedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectProveedorResult" nillable="true" type="q36:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertProveedorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateProveedorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteProveedorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Like" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectRackResult" nillable="true" type="q37:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Rack" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRackResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Rack" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRackResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRackResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRedundancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectRedundanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectRedundanciaResult" nillable="true" type="q38:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRedundancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDRedundancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertRedundanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertRedundanciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRedundancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDRedundancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRedundanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRedundanciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRedundancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDRedundancia" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRedundanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRedundanciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="San" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectSANResult" nillable="true" type="q39:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="San" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="San" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDSan" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSANResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidor4Redundancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidor4RedundanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidor4RedundanciaResult" nillable="true" type="q40:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidorResult" nillable="true" type="q41:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSistemaOperativo" type="xs:int" />
+        <xs:element minOccurs="0" name="IDAmbiente" type="xs:int" />
+        <xs:element minOccurs="0" name="IDTipo" type="xs:int" />
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NoProcesadores" type="xs:int" />
+        <xs:element minOccurs="0" name="Ram" type="xs:int" />
+        <xs:element minOccurs="0" name="NoEthernet" type="xs:int" />
+        <xs:element minOccurs="0" name="TeamEthernet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaParches" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertServidorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSistemaOperativo" type="xs:int" />
+        <xs:element minOccurs="0" name="IDAmbiente" type="xs:int" />
+        <xs:element minOccurs="0" name="IDTipo" type="xs:int" />
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NoProcesadores" type="xs:int" />
+        <xs:element minOccurs="0" name="Ram" type="xs:int" />
+        <xs:element minOccurs="0" name="NoEthernet" type="xs:int" />
+        <xs:element minOccurs="0" name="TeamEthernet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaParches" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateServidorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteServidorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidorFisicoResult" nillable="true" type="q42:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDModelo" type="xs:int" />
+        <xs:element minOccurs="0" name="IDEdificio" type="xs:int" />
+        <xs:element minOccurs="0" name="Procesador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ServiceTag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FuentesRedundantes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaFinGarantia" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaCompra" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IDRack" type="xs:int" />
+        <xs:element minOccurs="0" name="OU" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertServidorFisicoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateservidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDModelo" type="xs:int" />
+        <xs:element minOccurs="0" name="IDEdificio" type="xs:int" />
+        <xs:element minOccurs="0" name="Procesador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ServiceTag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FuentesRedundantes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaFinGarantia" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaCompra" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IDRack" type="xs:int" />
+        <xs:element minOccurs="0" name="OU" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateservidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateservidorFisicoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorFisico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorFisicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteServidorFisicoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Solucion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidorSolucionResult" nillable="true" type="q43:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSolucion" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertServidorSolucionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSolucion" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateServidorSolucionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDSolucion" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteServidorSolucionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidorUsuarioResult" nillable="true" type="q44:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertServidorUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateServidorUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteServidorUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorVirtual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorVirtualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidorVirtualResult" nillable="true" type="q45:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorVirtual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDCluster" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorVirtualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertServidorVirtualResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorVirtual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDCluster" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorVirtualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateServidorVirtualResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorVirtual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorVirtualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteServidorVirtualResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorWebservice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectServidorWebserviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectServidorWebserviceResult" nillable="true" type="q46:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorWebservice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDWebservice" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertServidorWebserviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertServidorWebserviceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorWebservice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDWebservice" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateServidorWebserviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateServidorWebserviceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorWebservice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDServidor" type="xs:int" />
+        <xs:element minOccurs="0" name="IDWebservice" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteServidorWebserviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteServidorWebserviceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSistemaOperativo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="SistemaOperativo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSistemaOperativoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectSistemaOperativoResult" nillable="true" type="q47:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSistemaOperativo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SistemaOperativo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fabricante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Licencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSistemaOperativoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertSistemaOperativoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSistemaOperativo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="SistemaOperativo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fabricante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Licencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Proveedor" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSistemaOperativoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSistemaOperativoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSistemaOperativo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSistemaOperativoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSistemaOperativoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Solucion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/WCFGCIS" minOccurs="0" name="SelectSolucionResult" nillable="true" type="q48:Data" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

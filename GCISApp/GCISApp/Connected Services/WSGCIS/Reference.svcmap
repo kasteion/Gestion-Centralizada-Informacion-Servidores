@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="695a4318-92df-491a-b747-38912d07af4b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://servweb4/WSGCISQAS/GCIS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GCIS.xsd" MetadataType="Schema" ID="4d1d9037-2ff6-41aa-be52-28992a872777" SourceId="1" SourceUrl="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd3" />
+    <MetadataFile FileName="GCIS.wsdl" MetadataType="Wsdl" ID="8bc5251c-143d-45bb-af9b-46f22f9ac905" SourceId="1" SourceUrl="http://servweb4/WSGCISQAS/GCIS.svc?wsdl" />
+    <MetadataFile FileName="GCIS1.xsd" MetadataType="Schema" ID="745114a4-8e97-4d98-8737-4ca34e89ec6e" SourceId="1" SourceUrl="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd1" />
+    <MetadataFile FileName="GCIS.disco" MetadataType="Disco" ID="67ff1165-ac2f-40b0-9af7-b5ffc868043a" SourceId="1" SourceUrl="http://servweb4/WSGCISQAS/GCIS.svc?disco" />
+    <MetadataFile FileName="GCIS2.xsd" MetadataType="Schema" ID="020fbf40-8517-4390-9dbe-9ebe2771aaec" SourceId="1" SourceUrl="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd0" />
+    <MetadataFile FileName="GCIS3.xsd" MetadataType="Schema" ID="70928f03-11f0-44b9-86ba-4190795d6eca" SourceId="1" SourceUrl="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

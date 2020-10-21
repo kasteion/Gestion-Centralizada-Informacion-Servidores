@@ -1,0 +1,3099 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GCIS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFGCIS" />
+      <xsd:import schemaLocation="http://servweb4/WSGCISQAS/GCIS.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGCIS_InsertSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStatus" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStatus" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStatus" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTipo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTipo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTipo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTipo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUrlAdministracionSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrlAdministracionSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUrlAdministracionSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUrlAdministracionSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUrlAdministracionSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUrlAdministracionSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUrlAdministracionSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUrlAdministracionSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUrlAdministracionSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrlAdministracionSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUrlAdministracionSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUrlAdministracionSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUrlAdministracionSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrlAdministracionSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUrlAdministracionSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUrlAdministracionSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuarioIDServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioIDServer" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuarioIDServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioIDServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuarioInstancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioInstancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuarioInstancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioInstanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUsuarioInstancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUsuarioInstancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUsuarioInstancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUsuarioInstanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUsuarioInstancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsuarioInstancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUsuarioInstancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsuarioInstanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUsuarioInstancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsuarioInstancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUsuarioInstancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsuarioInstanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuarioSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectUsuarioSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectUsuarioSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUsuarioSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUsuarioSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertUsuarioSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUsuarioSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUsuarioSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsuarioSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateUsuarioSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsuarioSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUsuarioSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsuarioSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteUsuarioSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsuarioSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectWebServiceIDServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWebServiceIDServer" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectWebServiceIDServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWebServiceIDServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectWebService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWebService" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectWebService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWebServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertWebService_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWebService" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertWebService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWebServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateWebService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWebService" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateWebService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWebServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteWebService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWebService" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteWebService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWebServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPermisosUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPermisosUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPermisosUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPermisosUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectAcceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAcceso" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectAcceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectAmbiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAmbiente" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectAmbiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAmbienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertAmbiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAmbiente" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertAmbiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAmbienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateAmbiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAmbiente" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateAmbiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAmbienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteAmbiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAmbiente" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteAmbiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAmbienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectBackupExecJobsIDServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBackupExecJobsIDServer" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectBackupExecJobsIDServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBackupExecJobsIDServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectBackupExecJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBackupExecJobs" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectBackupExecJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBackupExecJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertBackupExecJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBackupExecJobs" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertBackupExecJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBackupExecJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateBackupExecJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBackupExecJobs" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateBackupExecJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBackupExecJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteBackupExecJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBackupExecJobs" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteBackupExecJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBackupExecJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectCluster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCluster" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectCluster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClusterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertCluster_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCluster" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertCluster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClusterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateCluster_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCluster" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateCluster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClusterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteCluster_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCluster" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteCluster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClusterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectClusterServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClusterServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectClusterServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClusterServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertClusterServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClusterServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertClusterServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClusterServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateClusterServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClusterServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateClusterServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClusterServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteClusterServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClusterServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteClusterServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClusterServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabaseIDInstancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseIDInstancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabaseIDInstancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseIDInstanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabaseMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabaseMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDatabaseMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDatabaseMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDatabaseMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDatabaseMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDatabaseMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatabaseMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDatabaseMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatabaseMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDatabaseMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabaseMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDatabaseMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabaseMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabaseUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDatabaseUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDatabaseUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDatabaseUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDatabaseUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDatabaseUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDatabaseUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDatabaseUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatabaseUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDatabaseUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDatabaseUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDatabaseUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabaseUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDatabaseUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDatabaseUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDisco_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDisco" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDisco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDiscoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDisco_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDisco" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDisco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDiscoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDisco_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDisco" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDisco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDiscoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDisco_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDisco" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDisco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDiscoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDocumentoServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDocumentoServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectDocumentoServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectDocumentoServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDocumentoServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertDocumentoServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDocumentoServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateDocumentoServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDocumentoServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentoServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteDocumentoServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentoServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectEdificio_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEdificio" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectEdificio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEdificioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertEdificio_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEdificio" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertEdificio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEdificioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateEdificio_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEdificio" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateEdificio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEdificioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteEdificio_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEdificio" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteEdificio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEdificioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectEthernet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEthernet" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectEthernet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectEthernetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertEthernet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEthernet" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertEthernet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEthernetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateEthernet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEthernet" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateEthernet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEthernetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteEthernet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEthernet" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteEthernet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEthernetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectInstanciaAplicacionIDServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInstanciaAplicacionIDServer" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectInstanciaAplicacionIDServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInstanciaAplicacionIDServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectInstanciaAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInstanciaAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectInstanciaAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectInstanciaAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertInstanciaAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInstanciaAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertInstanciaAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInstanciaAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateInstanciaAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInstanciaAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateInstanciaAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInstanciaAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteInstanciaAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstanciaAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteInstanciaAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstanciaAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMarca" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMarca" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMarca" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarca" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectModeloByMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectModeloByMarca" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectModeloByMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectModeloByMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectModelo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertModelo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateModelo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteModelo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPlanMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPlanMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPlanMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPlanMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertPlanMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPlanMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertPlanMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPlanMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdatePlanMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlanMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdatePlanMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlanMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeletePlanMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlanMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeletePlanMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlanMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPoolBySan_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPoolBySan" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPoolBySan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPoolBySanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPool_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPool" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectPool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertPool_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPool" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertPool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdatePool_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePool" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdatePool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeletePool_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePool" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeletePool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectProcesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProcesador" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectProcesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProcesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertProcesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProcesador" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertProcesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProcesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateProcesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProcesador" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateProcesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProcesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteProcesador_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProcesador" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteProcesador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProcesadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectRack_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRack" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectRack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertRack_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRack" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertRack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateRack_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRack" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateRack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteRack_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRack" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteRack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectRedundancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRedundancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectRedundancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectRedundanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertRedundancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRedundancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertRedundancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRedundanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateRedundancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRedundancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateRedundancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRedundanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteRedundancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRedundancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteRedundancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRedundanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteSAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSAN" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteSAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidor4Redundancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidor4Redundancia" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidor4Redundancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidor4RedundanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidor" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateservidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateservidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateservidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateservidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorFisico_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorFisico" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorFisico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorFisicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorSolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorVirtual_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorVirtual" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorVirtual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorVirtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorVirtual_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorVirtual" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorVirtual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorVirtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorVirtual_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorVirtual" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorVirtual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorVirtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorVirtual_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorVirtual" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorVirtual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorVirtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorWebservice_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorWebservice" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectServidorWebservice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectServidorWebserviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorWebservice_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorWebservice" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertServidorWebservice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertServidorWebserviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorWebservice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorWebservice" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateServidorWebservice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateServidorWebserviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorWebservice_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorWebservice" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteServidorWebservice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteServidorWebserviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectSistemaOperativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSistemaOperativo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectSistemaOperativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSistemaOperativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertSistemaOperativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSistemaOperativo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_InsertSistemaOperativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSistemaOperativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateSistemaOperativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSistemaOperativo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_UpdateSistemaOperativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSistemaOperativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteSistemaOperativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSistemaOperativo" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_DeleteSistemaOperativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSistemaOperativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectSolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSolucion" />
+  </wsdl:message>
+  <wsdl:message name="IGCIS_SelectSolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSolucionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGCIS">
+    <wsdl:operation name="InsertSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertSolucion" message="tns:IGCIS_InsertSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertSolucionResponse" message="tns:IGCIS_InsertSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateSolucion" message="tns:IGCIS_UpdateSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateSolucionResponse" message="tns:IGCIS_UpdateSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteSolucion" message="tns:IGCIS_DeleteSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteSolucionResponse" message="tns:IGCIS_DeleteSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectStatus" message="tns:IGCIS_SelectStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectStatusResponse" message="tns:IGCIS_SelectStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertStatus" message="tns:IGCIS_InsertStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertStatusResponse" message="tns:IGCIS_InsertStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateStatus" message="tns:IGCIS_UpdateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateStatusResponse" message="tns:IGCIS_UpdateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteStatus" message="tns:IGCIS_DeleteStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteStatusResponse" message="tns:IGCIS_DeleteStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectTipo" message="tns:IGCIS_SelectTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectTipoResponse" message="tns:IGCIS_SelectTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertTipo" message="tns:IGCIS_InsertTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertTipoResponse" message="tns:IGCIS_InsertTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateTipo" message="tns:IGCIS_UpdateTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateTipoResponse" message="tns:IGCIS_UpdateTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteTipo" message="tns:IGCIS_DeleteTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteTipoResponse" message="tns:IGCIS_DeleteTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrlAdministracionSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectUrlAdministracionSAN" message="tns:IGCIS_SelectUrlAdministracionSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectUrlAdministracionSANResponse" message="tns:IGCIS_SelectUrlAdministracionSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUrlAdministracionSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertUrlAdministracionSAN" message="tns:IGCIS_InsertUrlAdministracionSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertUrlAdministracionSANResponse" message="tns:IGCIS_InsertUrlAdministracionSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrlAdministracionSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateUrlAdministracionSAN" message="tns:IGCIS_UpdateUrlAdministracionSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateUrlAdministracionSANResponse" message="tns:IGCIS_UpdateUrlAdministracionSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrlAdministracionSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteUrlAdministracionSAN" message="tns:IGCIS_DeleteUrlAdministracionSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteUrlAdministracionSANResponse" message="tns:IGCIS_DeleteUrlAdministracionSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarioIDServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioIDServer" message="tns:IGCIS_SelectUsuarioIDServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioIDServerResponse" message="tns:IGCIS_SelectUsuarioIDServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectUsuario" message="tns:IGCIS_SelectUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioResponse" message="tns:IGCIS_SelectUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertUsuario" message="tns:IGCIS_InsertUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertUsuarioResponse" message="tns:IGCIS_InsertUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateUsuario" message="tns:IGCIS_UpdateUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateUsuarioResponse" message="tns:IGCIS_UpdateUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteUsuario" message="tns:IGCIS_DeleteUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteUsuarioResponse" message="tns:IGCIS_DeleteUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarioInstancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioInstancia" message="tns:IGCIS_SelectUsuarioInstancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioInstanciaResponse" message="tns:IGCIS_SelectUsuarioInstancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUsuarioInstancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertUsuarioInstancia" message="tns:IGCIS_InsertUsuarioInstancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertUsuarioInstanciaResponse" message="tns:IGCIS_InsertUsuarioInstancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsuarioInstancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateUsuarioInstancia" message="tns:IGCIS_UpdateUsuarioInstancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateUsuarioInstanciaResponse" message="tns:IGCIS_UpdateUsuarioInstancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsuarioInstancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteUsuarioInstancia" message="tns:IGCIS_DeleteUsuarioInstancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteUsuarioInstanciaResponse" message="tns:IGCIS_DeleteUsuarioInstancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarioSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioSAN" message="tns:IGCIS_SelectUsuarioSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectUsuarioSANResponse" message="tns:IGCIS_SelectUsuarioSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUsuarioSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertUsuarioSAN" message="tns:IGCIS_InsertUsuarioSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertUsuarioSANResponse" message="tns:IGCIS_InsertUsuarioSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsuarioSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateUsuarioSAN" message="tns:IGCIS_UpdateUsuarioSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateUsuarioSANResponse" message="tns:IGCIS_UpdateUsuarioSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsuarioSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteUsuarioSAN" message="tns:IGCIS_DeleteUsuarioSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteUsuarioSANResponse" message="tns:IGCIS_DeleteUsuarioSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWebServiceIDServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectWebServiceIDServer" message="tns:IGCIS_SelectWebServiceIDServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectWebServiceIDServerResponse" message="tns:IGCIS_SelectWebServiceIDServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWebService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectWebService" message="tns:IGCIS_SelectWebService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectWebServiceResponse" message="tns:IGCIS_SelectWebService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWebService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertWebService" message="tns:IGCIS_InsertWebService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertWebServiceResponse" message="tns:IGCIS_InsertWebService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWebService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateWebService" message="tns:IGCIS_UpdateWebService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateWebServiceResponse" message="tns:IGCIS_UpdateWebService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWebService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteWebService" message="tns:IGCIS_DeleteWebService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteWebServiceResponse" message="tns:IGCIS_DeleteWebService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPermisosUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectPermisosUsuarios" message="tns:IGCIS_SelectPermisosUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectPermisosUsuariosResponse" message="tns:IGCIS_SelectPermisosUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAcceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectAcceso" message="tns:IGCIS_SelectAcceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectAccesoResponse" message="tns:IGCIS_SelectAcceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAmbiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectAmbiente" message="tns:IGCIS_SelectAmbiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectAmbienteResponse" message="tns:IGCIS_SelectAmbiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAmbiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertAmbiente" message="tns:IGCIS_InsertAmbiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertAmbienteResponse" message="tns:IGCIS_InsertAmbiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmbiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateAmbiente" message="tns:IGCIS_UpdateAmbiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateAmbienteResponse" message="tns:IGCIS_UpdateAmbiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAmbiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteAmbiente" message="tns:IGCIS_DeleteAmbiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteAmbienteResponse" message="tns:IGCIS_DeleteAmbiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectAplicacion" message="tns:IGCIS_SelectAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectAplicacionResponse" message="tns:IGCIS_SelectAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertAplicacion" message="tns:IGCIS_InsertAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertAplicacionResponse" message="tns:IGCIS_InsertAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateAplicacion" message="tns:IGCIS_UpdateAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateAplicacionResponse" message="tns:IGCIS_UpdateAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteAplicacion" message="tns:IGCIS_DeleteAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteAplicacionResponse" message="tns:IGCIS_DeleteAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBackupExecJobsIDServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectBackupExecJobsIDServer" message="tns:IGCIS_SelectBackupExecJobsIDServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectBackupExecJobsIDServerResponse" message="tns:IGCIS_SelectBackupExecJobsIDServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBackupExecJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectBackupExecJobs" message="tns:IGCIS_SelectBackupExecJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectBackupExecJobsResponse" message="tns:IGCIS_SelectBackupExecJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBackupExecJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertBackupExecJobs" message="tns:IGCIS_InsertBackupExecJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertBackupExecJobsResponse" message="tns:IGCIS_InsertBackupExecJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBackupExecJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateBackupExecJobs" message="tns:IGCIS_UpdateBackupExecJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateBackupExecJobsResponse" message="tns:IGCIS_UpdateBackupExecJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBackupExecJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteBackupExecJobs" message="tns:IGCIS_DeleteBackupExecJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteBackupExecJobsResponse" message="tns:IGCIS_DeleteBackupExecJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCluster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectCluster" message="tns:IGCIS_SelectCluster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectClusterResponse" message="tns:IGCIS_SelectCluster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCluster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertCluster" message="tns:IGCIS_InsertCluster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertClusterResponse" message="tns:IGCIS_InsertCluster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCluster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateCluster" message="tns:IGCIS_UpdateCluster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateClusterResponse" message="tns:IGCIS_UpdateCluster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCluster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteCluster" message="tns:IGCIS_DeleteCluster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteClusterResponse" message="tns:IGCIS_DeleteCluster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectClusterServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectClusterServidorFisico" message="tns:IGCIS_SelectClusterServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectClusterServidorFisicoResponse" message="tns:IGCIS_SelectClusterServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertClusterServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertClusterServidorFisico" message="tns:IGCIS_InsertClusterServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertClusterServidorFisicoResponse" message="tns:IGCIS_InsertClusterServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClusterServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateClusterServidorFisico" message="tns:IGCIS_UpdateClusterServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateClusterServidorFisicoResponse" message="tns:IGCIS_UpdateClusterServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClusterServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteClusterServidorFisico" message="tns:IGCIS_DeleteClusterServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteClusterServidorFisicoResponse" message="tns:IGCIS_DeleteClusterServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectContacto" message="tns:IGCIS_SelectContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectContactoResponse" message="tns:IGCIS_SelectContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertContacto" message="tns:IGCIS_InsertContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertContactoResponse" message="tns:IGCIS_InsertContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateContacto" message="tns:IGCIS_UpdateContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateContactoResponse" message="tns:IGCIS_UpdateContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteContacto" message="tns:IGCIS_DeleteContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteContactoResponse" message="tns:IGCIS_DeleteContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabaseIDInstancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseIDInstancia" message="tns:IGCIS_SelectDatabaseIDInstancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseIDInstanciaResponse" message="tns:IGCIS_SelectDatabaseIDInstancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectDatabase" message="tns:IGCIS_SelectDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseResponse" message="tns:IGCIS_SelectDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertDatabase" message="tns:IGCIS_InsertDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertDatabaseResponse" message="tns:IGCIS_InsertDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateDatabase" message="tns:IGCIS_UpdateDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateDatabaseResponse" message="tns:IGCIS_UpdateDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteDatabase" message="tns:IGCIS_DeleteDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteDatabaseResponse" message="tns:IGCIS_DeleteDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabaseMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseMantenimiento" message="tns:IGCIS_SelectDatabaseMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseMantenimientoResponse" message="tns:IGCIS_SelectDatabaseMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDatabaseMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertDatabaseMantenimiento" message="tns:IGCIS_InsertDatabaseMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertDatabaseMantenimientoResponse" message="tns:IGCIS_InsertDatabaseMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatabaseMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateDatabaseMantenimiento" message="tns:IGCIS_UpdateDatabaseMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateDatabaseMantenimientoResponse" message="tns:IGCIS_UpdateDatabaseMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabaseMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteDatabaseMantenimiento" message="tns:IGCIS_DeleteDatabaseMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteDatabaseMantenimientoResponse" message="tns:IGCIS_DeleteDatabaseMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabaseUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseUsuario" message="tns:IGCIS_SelectDatabaseUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectDatabaseUsuarioResponse" message="tns:IGCIS_SelectDatabaseUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDatabaseUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertDatabaseUsuario" message="tns:IGCIS_InsertDatabaseUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertDatabaseUsuarioResponse" message="tns:IGCIS_InsertDatabaseUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatabaseUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateDatabaseUsuario" message="tns:IGCIS_UpdateDatabaseUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateDatabaseUsuarioResponse" message="tns:IGCIS_UpdateDatabaseUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabaseUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteDatabaseUsuario" message="tns:IGCIS_DeleteDatabaseUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteDatabaseUsuarioResponse" message="tns:IGCIS_DeleteDatabaseUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDisco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectDisco" message="tns:IGCIS_SelectDisco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectDiscoResponse" message="tns:IGCIS_SelectDisco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDisco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertDisco" message="tns:IGCIS_InsertDisco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertDiscoResponse" message="tns:IGCIS_InsertDisco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDisco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateDisco" message="tns:IGCIS_UpdateDisco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateDiscoResponse" message="tns:IGCIS_UpdateDisco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDisco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteDisco" message="tns:IGCIS_DeleteDisco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteDiscoResponse" message="tns:IGCIS_DeleteDisco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocumentoServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectDocumentoServidor" message="tns:IGCIS_SelectDocumentoServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectDocumentoServidorResponse" message="tns:IGCIS_SelectDocumentoServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertDocumentoServidor" message="tns:IGCIS_InsertDocumentoServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertDocumentoServidorResponse" message="tns:IGCIS_InsertDocumentoServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateDocumentoServidor" message="tns:IGCIS_UpdateDocumentoServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateDocumentoServidorResponse" message="tns:IGCIS_UpdateDocumentoServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentoServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteDocumentoServidor" message="tns:IGCIS_DeleteDocumentoServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteDocumentoServidorResponse" message="tns:IGCIS_DeleteDocumentoServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEdificio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectEdificio" message="tns:IGCIS_SelectEdificio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectEdificioResponse" message="tns:IGCIS_SelectEdificio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEdificio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertEdificio" message="tns:IGCIS_InsertEdificio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertEdificioResponse" message="tns:IGCIS_InsertEdificio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEdificio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateEdificio" message="tns:IGCIS_UpdateEdificio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateEdificioResponse" message="tns:IGCIS_UpdateEdificio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEdificio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteEdificio" message="tns:IGCIS_DeleteEdificio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteEdificioResponse" message="tns:IGCIS_DeleteEdificio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectEthernet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectEthernet" message="tns:IGCIS_SelectEthernet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectEthernetResponse" message="tns:IGCIS_SelectEthernet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEthernet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertEthernet" message="tns:IGCIS_InsertEthernet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertEthernetResponse" message="tns:IGCIS_InsertEthernet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEthernet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateEthernet" message="tns:IGCIS_UpdateEthernet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateEthernetResponse" message="tns:IGCIS_UpdateEthernet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEthernet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteEthernet" message="tns:IGCIS_DeleteEthernet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteEthernetResponse" message="tns:IGCIS_DeleteEthernet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectInstanciaAplicacionIDServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectInstanciaAplicacionIDServer" message="tns:IGCIS_SelectInstanciaAplicacionIDServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectInstanciaAplicacionIDServerResponse" message="tns:IGCIS_SelectInstanciaAplicacionIDServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectInstanciaAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectInstanciaAplicacion" message="tns:IGCIS_SelectInstanciaAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectInstanciaAplicacionResponse" message="tns:IGCIS_SelectInstanciaAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInstanciaAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertInstanciaAplicacion" message="tns:IGCIS_InsertInstanciaAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertInstanciaAplicacionResponse" message="tns:IGCIS_InsertInstanciaAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstanciaAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateInstanciaAplicacion" message="tns:IGCIS_UpdateInstanciaAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateInstanciaAplicacionResponse" message="tns:IGCIS_UpdateInstanciaAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstanciaAplicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteInstanciaAplicacion" message="tns:IGCIS_DeleteInstanciaAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteInstanciaAplicacionResponse" message="tns:IGCIS_DeleteInstanciaAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectMarca" message="tns:IGCIS_SelectMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectMarcaResponse" message="tns:IGCIS_SelectMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertMarca" message="tns:IGCIS_InsertMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertMarcaResponse" message="tns:IGCIS_InsertMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateMarca" message="tns:IGCIS_UpdateMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateMarcaResponse" message="tns:IGCIS_UpdateMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteMarca" message="tns:IGCIS_DeleteMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteMarcaResponse" message="tns:IGCIS_DeleteMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectModeloByMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectModeloByMarca" message="tns:IGCIS_SelectModeloByMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectModeloByMarcaResponse" message="tns:IGCIS_SelectModeloByMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectModelo" message="tns:IGCIS_SelectModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectModeloResponse" message="tns:IGCIS_SelectModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertModelo" message="tns:IGCIS_InsertModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertModeloResponse" message="tns:IGCIS_InsertModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateModelo" message="tns:IGCIS_UpdateModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateModeloResponse" message="tns:IGCIS_UpdateModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteModelo" message="tns:IGCIS_DeleteModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteModeloResponse" message="tns:IGCIS_DeleteModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPlanMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectPlanMantenimiento" message="tns:IGCIS_SelectPlanMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectPlanMantenimientoResponse" message="tns:IGCIS_SelectPlanMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPlanMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertPlanMantenimiento" message="tns:IGCIS_InsertPlanMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertPlanMantenimientoResponse" message="tns:IGCIS_InsertPlanMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlanMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdatePlanMantenimiento" message="tns:IGCIS_UpdatePlanMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdatePlanMantenimientoResponse" message="tns:IGCIS_UpdatePlanMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlanMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeletePlanMantenimiento" message="tns:IGCIS_DeletePlanMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeletePlanMantenimientoResponse" message="tns:IGCIS_DeletePlanMantenimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPoolBySan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectPoolBySan" message="tns:IGCIS_SelectPoolBySan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectPoolBySanResponse" message="tns:IGCIS_SelectPoolBySan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectPool" message="tns:IGCIS_SelectPool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectPoolResponse" message="tns:IGCIS_SelectPool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertPool" message="tns:IGCIS_InsertPool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertPoolResponse" message="tns:IGCIS_InsertPool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdatePool" message="tns:IGCIS_UpdatePool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdatePoolResponse" message="tns:IGCIS_UpdatePool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeletePool" message="tns:IGCIS_DeletePool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeletePoolResponse" message="tns:IGCIS_DeletePool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectProcesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectProcesador" message="tns:IGCIS_SelectProcesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectProcesadorResponse" message="tns:IGCIS_SelectProcesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProcesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertProcesador" message="tns:IGCIS_InsertProcesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertProcesadorResponse" message="tns:IGCIS_InsertProcesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProcesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateProcesador" message="tns:IGCIS_UpdateProcesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateProcesadorResponse" message="tns:IGCIS_UpdateProcesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProcesador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteProcesador" message="tns:IGCIS_DeleteProcesador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteProcesadorResponse" message="tns:IGCIS_DeleteProcesador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectProveedor" message="tns:IGCIS_SelectProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectProveedorResponse" message="tns:IGCIS_SelectProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertProveedor" message="tns:IGCIS_InsertProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertProveedorResponse" message="tns:IGCIS_InsertProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateProveedor" message="tns:IGCIS_UpdateProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateProveedorResponse" message="tns:IGCIS_UpdateProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteProveedor" message="tns:IGCIS_DeleteProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteProveedorResponse" message="tns:IGCIS_DeleteProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectRack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectRack" message="tns:IGCIS_SelectRack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectRackResponse" message="tns:IGCIS_SelectRack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertRack" message="tns:IGCIS_InsertRack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertRackResponse" message="tns:IGCIS_InsertRack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateRack" message="tns:IGCIS_UpdateRack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateRackResponse" message="tns:IGCIS_UpdateRack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteRack" message="tns:IGCIS_DeleteRack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteRackResponse" message="tns:IGCIS_DeleteRack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectRedundancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectRedundancia" message="tns:IGCIS_SelectRedundancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectRedundanciaResponse" message="tns:IGCIS_SelectRedundancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRedundancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertRedundancia" message="tns:IGCIS_InsertRedundancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertRedundanciaResponse" message="tns:IGCIS_InsertRedundancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRedundancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateRedundancia" message="tns:IGCIS_UpdateRedundancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateRedundanciaResponse" message="tns:IGCIS_UpdateRedundancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRedundancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteRedundancia" message="tns:IGCIS_DeleteRedundancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteRedundanciaResponse" message="tns:IGCIS_DeleteRedundancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectSAN" message="tns:IGCIS_SelectSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectSANResponse" message="tns:IGCIS_SelectSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertSAN" message="tns:IGCIS_InsertSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertSANResponse" message="tns:IGCIS_InsertSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateSAN" message="tns:IGCIS_UpdateSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateSANResponse" message="tns:IGCIS_UpdateSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteSAN" message="tns:IGCIS_DeleteSAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteSANResponse" message="tns:IGCIS_DeleteSAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidor4Redundancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidor4Redundancia" message="tns:IGCIS_SelectServidor4Redundancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidor4RedundanciaResponse" message="tns:IGCIS_SelectServidor4Redundancia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidor" message="tns:IGCIS_SelectServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidorResponse" message="tns:IGCIS_SelectServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertServidor" message="tns:IGCIS_InsertServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertServidorResponse" message="tns:IGCIS_InsertServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateServidor" message="tns:IGCIS_UpdateServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorResponse" message="tns:IGCIS_UpdateServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteServidor" message="tns:IGCIS_DeleteServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorResponse" message="tns:IGCIS_DeleteServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidorFisico" message="tns:IGCIS_SelectServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidorFisicoResponse" message="tns:IGCIS_SelectServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertServidorFisico" message="tns:IGCIS_InsertServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertServidorFisicoResponse" message="tns:IGCIS_InsertServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateservidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateservidorFisico" message="tns:IGCIS_UpdateservidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateservidorFisicoResponse" message="tns:IGCIS_UpdateservidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorFisico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorFisico" message="tns:IGCIS_DeleteServidorFisico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorFisicoResponse" message="tns:IGCIS_DeleteServidorFisico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidorSolucion" message="tns:IGCIS_SelectServidorSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidorSolucionResponse" message="tns:IGCIS_SelectServidorSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertServidorSolucion" message="tns:IGCIS_InsertServidorSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertServidorSolucionResponse" message="tns:IGCIS_InsertServidorSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorSolucion" message="tns:IGCIS_UpdateServidorSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorSolucionResponse" message="tns:IGCIS_UpdateServidorSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorSolucion" message="tns:IGCIS_DeleteServidorSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorSolucionResponse" message="tns:IGCIS_DeleteServidorSolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidorUsuario" message="tns:IGCIS_SelectServidorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidorUsuarioResponse" message="tns:IGCIS_SelectServidorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertServidorUsuario" message="tns:IGCIS_InsertServidorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertServidorUsuarioResponse" message="tns:IGCIS_InsertServidorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorUsuario" message="tns:IGCIS_UpdateServidorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorUsuarioResponse" message="tns:IGCIS_UpdateServidorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorUsuario" message="tns:IGCIS_DeleteServidorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorUsuarioResponse" message="tns:IGCIS_DeleteServidorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorVirtual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidorVirtual" message="tns:IGCIS_SelectServidorVirtual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidorVirtualResponse" message="tns:IGCIS_SelectServidorVirtual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorVirtual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertServidorVirtual" message="tns:IGCIS_InsertServidorVirtual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertServidorVirtualResponse" message="tns:IGCIS_InsertServidorVirtual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorVirtual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorVirtual" message="tns:IGCIS_UpdateServidorVirtual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorVirtualResponse" message="tns:IGCIS_UpdateServidorVirtual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorVirtual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorVirtual" message="tns:IGCIS_DeleteServidorVirtual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorVirtualResponse" message="tns:IGCIS_DeleteServidorVirtual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorWebservice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectServidorWebservice" message="tns:IGCIS_SelectServidorWebservice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectServidorWebserviceResponse" message="tns:IGCIS_SelectServidorWebservice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorWebservice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertServidorWebservice" message="tns:IGCIS_InsertServidorWebservice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertServidorWebserviceResponse" message="tns:IGCIS_InsertServidorWebservice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorWebservice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorWebservice" message="tns:IGCIS_UpdateServidorWebservice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateServidorWebserviceResponse" message="tns:IGCIS_UpdateServidorWebservice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorWebservice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorWebservice" message="tns:IGCIS_DeleteServidorWebservice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteServidorWebserviceResponse" message="tns:IGCIS_DeleteServidorWebservice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSistemaOperativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectSistemaOperativo" message="tns:IGCIS_SelectSistemaOperativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectSistemaOperativoResponse" message="tns:IGCIS_SelectSistemaOperativo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSistemaOperativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/InsertSistemaOperativo" message="tns:IGCIS_InsertSistemaOperativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/InsertSistemaOperativoResponse" message="tns:IGCIS_InsertSistemaOperativo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSistemaOperativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/UpdateSistemaOperativo" message="tns:IGCIS_UpdateSistemaOperativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/UpdateSistemaOperativoResponse" message="tns:IGCIS_UpdateSistemaOperativo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSistemaOperativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/DeleteSistemaOperativo" message="tns:IGCIS_DeleteSistemaOperativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/DeleteSistemaOperativoResponse" message="tns:IGCIS_DeleteSistemaOperativo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGCIS/SelectSolucion" message="tns:IGCIS_SelectSolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGCIS/SelectSolucionResponse" message="tns:IGCIS_SelectSolucion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGCIS" type="tns:IGCIS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectStatus">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStatus">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStatus">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTipo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTipo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTipo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTipo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUrlAdministracionSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectUrlAdministracionSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUrlAdministracionSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertUrlAdministracionSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUrlAdministracionSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateUrlAdministracionSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUrlAdministracionSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteUrlAdministracionSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarioIDServer">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectUsuarioIDServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarioInstancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectUsuarioInstancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUsuarioInstancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertUsuarioInstancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsuarioInstancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateUsuarioInstancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsuarioInstancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteUsuarioInstancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarioSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectUsuarioSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUsuarioSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertUsuarioSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsuarioSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateUsuarioSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsuarioSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteUsuarioSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWebServiceIDServer">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectWebServiceIDServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWebService">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectWebService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWebService">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertWebService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWebService">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateWebService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWebService">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteWebService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPermisosUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectPermisosUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAcceso">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAmbiente">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectAmbiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAmbiente">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertAmbiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAmbiente">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateAmbiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAmbiente">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteAmbiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBackupExecJobsIDServer">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectBackupExecJobsIDServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBackupExecJobs">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectBackupExecJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBackupExecJobs">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertBackupExecJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBackupExecJobs">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateBackupExecJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBackupExecJobs">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteBackupExecJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCluster">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectCluster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCluster">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertCluster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCluster">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateCluster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCluster">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteCluster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectClusterServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectClusterServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertClusterServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertClusterServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClusterServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateClusterServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClusterServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteClusterServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectContacto">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertContacto">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContacto">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContacto">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabaseIDInstancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectDatabaseIDInstancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabase">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDatabase">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatabase">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabase">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabaseMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectDatabaseMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDatabaseMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertDatabaseMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatabaseMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateDatabaseMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabaseMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteDatabaseMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDatabaseUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectDatabaseUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDatabaseUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertDatabaseUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDatabaseUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateDatabaseUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDatabaseUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteDatabaseUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDisco">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectDisco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDisco">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertDisco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDisco">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateDisco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDisco">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteDisco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectDocumentoServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectDocumentoServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertDocumentoServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateDocumentoServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentoServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteDocumentoServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEdificio">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectEdificio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEdificio">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertEdificio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEdificio">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateEdificio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEdificio">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteEdificio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectEthernet">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectEthernet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEthernet">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertEthernet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEthernet">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateEthernet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEthernet">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteEthernet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectInstanciaAplicacionIDServer">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectInstanciaAplicacionIDServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectInstanciaAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectInstanciaAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInstanciaAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertInstanciaAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstanciaAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateInstanciaAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstanciaAplicacion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteInstanciaAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMarca">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMarca">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMarca">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarca">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectModeloByMarca">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectModeloByMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectModelo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModelo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateModelo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteModelo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPlanMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectPlanMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPlanMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertPlanMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlanMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdatePlanMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlanMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeletePlanMantenimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPoolBySan">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectPoolBySan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPool">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPool">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePool">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdatePool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePool">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeletePool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectProcesador">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectProcesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProcesador">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertProcesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProcesador">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateProcesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProcesador">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteProcesador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectProveedor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProveedor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProveedor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProveedor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRack">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectRack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRack">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertRack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRack">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateRack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRack">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteRack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectRedundancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectRedundancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRedundancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertRedundancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRedundancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateRedundancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRedundancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteRedundancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSAN">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteSAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidor4Redundancia">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidor4Redundancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidor">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateservidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateservidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorFisico">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteServidorFisico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidorSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertServidorSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateServidorSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteServidorSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertServidorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateServidorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteServidorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorVirtual">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidorVirtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorVirtual">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertServidorVirtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorVirtual">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateServidorVirtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorVirtual">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteServidorVirtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServidorWebservice">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectServidorWebservice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertServidorWebservice">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertServidorWebservice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServidorWebservice">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateServidorWebservice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServidorWebservice">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteServidorWebservice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSistemaOperativo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectSistemaOperativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSistemaOperativo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/InsertSistemaOperativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSistemaOperativo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/UpdateSistemaOperativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSistemaOperativo">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/DeleteSistemaOperativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSolucion">
+      <soap:operation soapAction="http://tempuri.org/IGCIS/SelectSolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GCIS">
+    <wsdl:port name="BasicHttpBinding_IGCIS" binding="tns:BasicHttpBinding_IGCIS">
+      <soap:address location="http://servweb4/WSGCISQAS/GCIS.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

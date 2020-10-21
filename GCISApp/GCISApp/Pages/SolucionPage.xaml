@@ -1,0 +1,207 @@
+﻿<Page x:Class="GCISApp.SolucionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GCISApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="SolucionPage">
+
+    <Grid>
+        <Border CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="500" Width="500" Background="White">
+            <Border.Effect>
+                <DropShadowEffect Color="DarkBlue"/>
+            </Border.Effect>
+        </Border>
+        <TabControl x:Name="TabSolucion" Width="475" Height="475" BorderBrush="{x:Null}">
+            <TabItem Header="R" Visibility="Collapsed" Loaded="TabItem_Loaded">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Solución</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Solución:</TextBlock>
+                    <TextBox x:Name="TxtIDSolucion" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Solución:</TextBlock>
+                    <TextBox x:Name="TxtNombreSolucion"></TextBox>
+                    <Grid Height="45" Width="465">
+                        <Button x:Name="BtnSelect" Margin="10" Click="BtnSelect_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Buscar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Select</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <DataGrid x:Name="DgSolucion" Height="250"></DataGrid>
+                    <Grid Height="45" Width="465">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnNuevaSolucion" Margin="10" Grid.Column="0" Click="BtnNuevaSolucion_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Nuevo.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Nuevo</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnEditarSolucion" Margin="10" Grid.Column="1" Click="BtnEditarSolucion_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Editar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Nuevo" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Solución - Nuevo</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Solución:</TextBlock>
+                    <TextBox x:Name="TxtIDSolucionN" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Solución:</TextBlock>
+                    <TextBox x:Name="TxtNombreSolucionN"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionSolucionN"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackSolucion" Margin="5" Grid.Column="0" Click="BtnBackSolucion_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarSolucion" Margin="5" Grid.Column="1" Click="BtnGuardarSolucion_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Edición" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Solución - Edición</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Solución:</TextBlock>
+                    <TextBox x:Name="TxtIDSolucionE" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Solución:</TextBlock>
+                    <TextBox x:Name="TxtNombreSolucionE"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionSolucionE"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TabControl x:Name="TabEdicion" Height="210">
+                        <TabItem Header="Servidores">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgServidores" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewServidor" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnNewServidor_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditServidor" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditServidor_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <TextBlock></TextBlock>
+                    <Grid Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackSolucion_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateSolucion" Margin="5" Grid.Column="1" Click="BtnUpdateSolucion_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteSolucion" Margin="5" Grid.Column="2" Click="BtnDeleteSolucion_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Servidor" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Solución - Servidores</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Solución:</TextBlock>
+                    <TextBox x:Name="TxtIDSolucionS" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Solución:</TextBlock>
+                    <TextBox x:Name="TxtNombreSolucionS"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Servidores:</TextBlock>
+                    <ListBox x:Name="ListServidores" Height="150">
+                    </ListBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewServidor" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackServidor" Margin="5" Grid.Column="0" Click="BtnBackServidor_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarServidor" Margin="5" Grid.Column="1" Click="BtnGuardarServidor_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditServidor" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackServidor_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteServidor" Margin="5" Grid.Column="2" Click="BtnDeleteServidor_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

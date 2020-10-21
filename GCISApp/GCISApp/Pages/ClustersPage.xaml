@@ -1,0 +1,237 @@
+﻿<Page x:Class="GCISApp.ClustersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GCISApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="ClustersPage">
+
+    <Grid>
+        <Border CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="500" Width="500" Background="White">
+            <Border.Effect>
+                <DropShadowEffect Color="DarkBlue"/>
+            </Border.Effect>
+        </Border>
+        <TabControl x:Name="TabClusters" Width="475" Height="475" BorderBrush="{x:Null}" Loaded="TabClusters_Loaded">
+            <TabItem Header="R" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Cluster</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Cluster:</TextBlock>
+                    <TextBox x:Name="TxtIDCluster" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Cluster:</TextBlock>
+                    <TextBox x:Name="TxtNombreCluster"></TextBox>
+                    <Grid Height="45" Width="465">
+                        <Button x:Name="BtnSelectCluster" Margin="10" Click="BtnSelectCluster_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Buscar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Select</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <DataGrid x:Name="DgCluster" Height="250"></DataGrid>
+                    <Grid Height="45" Width="465">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnNuevoCluster" Margin="10" Grid.Column="0" Click="BtnNuevoCluster_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Nuevo.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Nuevo</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnEditarCluster" Margin="10" Grid.Column="1" Click="BtnEditarCluster_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Editar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Nuevo" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Cluster - Nuevo</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Cluster:</TextBlock>
+                    <TextBox x:Name="TxtIDClusterN" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Cluster:</TextBlock>
+                    <TextBox x:Name="TxtNombreClusterN"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionClusterN"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Proveedor:</TextBlock>
+                    <ComboBox x:Name="CmbProveedorClusterN" SelectionChanged="CmbProveedorClusterN_SelectionChanged"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Software de Virtualización:</TextBlock>
+                    <ComboBox x:Name="CmbAplicacionClusterN"></ComboBox>
+                    <TextBlock></TextBlock>
+                    <Grid Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackCluster" Margin="5" Grid.Column="0" Click="BtnBackCluster_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarCluster" Margin="5" Grid.Column="1" Click="BtnGuardarCluster_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Edición" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Cluster - Edición</TextBlock>
+                    <TextBlock></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">ID Cluster:</TextBlock>
+                        <TextBox x:Name="TxtIDClusterE" IsEnabled="False" Grid.Column="1" Grid.Row="0"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="2"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="3">Nombre Cluster:</TextBlock>
+                        <TextBox x:Name="TxtNombreClusterE" Grid.Column="1" Grid.Row="3"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="4"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="5">Descripción:</TextBlock>
+                        <TextBox x:Name="TxtDescripcionClusterE" Grid.Column="1" Grid.Row="5"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="6"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="7">Proveedor:</TextBlock>
+                        <ComboBox x:Name="CmbProveedorClusterE" Grid.Column="1" Grid.Row="7" SelectionChanged="CmbProveedorClusterE_SelectionChanged"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="8"></TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="9">Software de Virtualización:</TextBlock>
+                        <ComboBox Grid.Column="1" Grid.Row="9" x:Name="CmbAplicacionClusterE"></ComboBox>
+                        <TextBlock Grid.Column="0" Grid.Row="10"></TextBlock>
+                    </Grid>
+                    <TabControl x:Name="TabEdicion" Height="200">
+                        <TabItem Header="Servidores">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DataGrid x:Name="DgServidores" Margin="10,10,0,10" Grid.Column="0"></DataGrid>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button x:Name="BtnNewServidor" Grid.Row="0" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnNewServidor_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Add.png"></Image>
+                                    </Button>
+                                    <Button x:Name="BtnEditServidor" Grid.Row="1" Height="25" Width="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnEditServidor_Click" IsEnabled="False">
+                                        <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <Grid Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackCluster_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnUpdateCluster" Margin="5" Grid.Column="1" Click="BtnUpdateCluster_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteCluster" Margin="5" Grid.Column="2" Click="BtnDeleteCluster_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Servidor" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Cluster - Servidores</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Cluster:</TextBlock>
+                    <TextBox x:Name="TxtIDClusterS" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Nombre Cluster:</TextBlock>
+                    <TextBox x:Name="TxtNombreClusterS"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Servidores:</TextBlock>
+                    <ListBox x:Name="ListServidores" Height="150">
+                    </ListBox>
+                    <TextBlock></TextBlock>
+                    <Grid x:Name="GridNewCluster" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackClusterS" Margin="5" Grid.Column="0" Click="BtnBackClusterS_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarClusterS" Margin="5" Grid.Column="1" Click="BtnGuardarClusterS_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid x:Name="GridEditCluster" Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Grid.Column="0" Click="BtnBackClusterS_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnDeleteClusterS" Margin="5" Grid.Column="2" Click="BtnDeleteClusterS_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

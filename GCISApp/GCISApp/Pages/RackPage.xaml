@@ -1,0 +1,129 @@
+﻿<Page x:Class="GCISApp.RackPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GCISApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="RackPage">
+    <Grid>
+        <Border CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="500" Width="500" Background="White">
+            <Border.Effect>
+                <DropShadowEffect Color="DarkBlue"/>
+            </Border.Effect>
+        </Border>
+        <TabControl x:Name="TabRack" Width="475" Height="475" BorderBrush="{x:Null}" Loaded="TabRack_Loaded">
+            <TabItem Header="R" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Rack</TextBlock>
+                    <TextBlock>ID Rack:</TextBlock>
+                    <TextBox x:Name="TxtID" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Rack:</TextBlock>
+                    <TextBox x:Name="TxtRack"></TextBox>
+                    <Grid Height="45" Width="465">
+                        <Button x:Name="BtnBuscar" Margin="10" Click="BtnBuscar_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Buscar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Select</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <DataGrid x:Name="DgRack" Height="250"></DataGrid>
+                    <Grid Height="45" Width="465">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnNuevo" Margin="10" Grid.Column="0" Click="BtnNuevo_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Nuevo.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Nuevo</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnEditar" Margin="10" Grid.Column="1" Click="BtnEditar_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Editar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Editar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Nuevo" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Rack - Nuevo</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Rack:</TextBlock>
+                    <TextBox x:Name="TxtIDN" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Rack:</TextBlock>
+                    <TextBox x:Name="TxtRackN"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción Rack:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionN"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid Height="40" Width="465">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBack" Margin="5" Grid.Column="0" Click="BtnBack_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardar" Margin="5" Grid.Column="1" Click="BtnGuardar_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Edicion" Visibility="Collapsed">
+                <StackPanel Width="465" Height="465">
+                    <TextBlock FontSize="24" FontWeight="Bold" Foreground="#FF133555">Rack - Edición</TextBlock>
+                    <TextBlock></TextBlock>
+                    <TextBlock>ID Rack:</TextBlock>
+                    <TextBox x:Name="TxtIDE" IsEnabled="False"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Rack:</TextBlock>
+                    <TextBox x:Name="TxtRackE"></TextBox>
+                    <TextBlock></TextBlock>
+                    <TextBlock>Descripción Rack:</TextBlock>
+                    <TextBox x:Name="TxtDescripcionE"></TextBox>
+                    <TextBlock></TextBlock>
+                    <Grid Height="40" Width="465">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="BtnBackE" Margin="5" Grid.Column="0" Click="BtnBackE_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Back.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Regresar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnGuardarE" Margin="5" Grid.Column="1" Click="BtnSaveE_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Guardar.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Guardar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BtnBorrarE" Margin="5" Grid.Column="2" Click="BtnBorrarE_Click" IsEnabled="False">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/GCISApp;component/Images/Delete.png"></Image>
+                                <TextBlock VerticalAlignment="Center">Borrar</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

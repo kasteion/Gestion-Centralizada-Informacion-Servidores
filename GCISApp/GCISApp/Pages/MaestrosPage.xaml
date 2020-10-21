@@ -1,0 +1,186 @@
+﻿<Page x:Class="GCISApp.MaestrosPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GCISApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MaestrosPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="80"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ToolBarTray Grid.Column="0" Orientation="Vertical">
+            <ToolBar Margin="3">
+                <Button x:Name="BtnMaestros" Width="70" Height="85" Click="BtnMaestros_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Maestros.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Maestros</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnServidores" Width="70" Height="85" Click="BtnServidores_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Servidores.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Servidores</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnInstancias" Width="70" Height="85" Click="BtnInstancias_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Instancias.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Instancias</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnDatabases" Width="70" Height="85" Click="BtnDatabases_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Database.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Databases</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnSoluciones" Width="70" Height="85" Click="BtnSoluciones_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Soluciones.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">Soluciones</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnSAN" Width="70" Height="85" Click="BtnSAN_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/GCISApp;component/Images/Discos.png" HorizontalAlignment="Center"></Image>
+                        <TextBlock HorizontalAlignment="Center">SAN</TextBlock>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <TabControl x:Name="TabMaestros" Grid.Column="1" BorderBrush="{x:Null}">
+            <TabControl.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF133555" Offset="0.007"/>
+                    <GradientStop Color="#FF21B1E3" Offset="1"/>
+                </LinearGradientBrush>
+            </TabControl.Background>
+            <TabItem Header="General" Visibility="Collapsed">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="BtnStatus" Grid.Column="0" Grid.Row="0" Margin="5" Click="BtnStatus_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Status.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Status</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnTipo" Grid.Column="1" Grid.Row="0" Margin="5" Click="BtnTipo_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Maestros.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Tipo</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnAmbiente" Grid.Column="2" Grid.Row="0" Margin="5" Click="BtnProcesador_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Tipo.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Ambiente</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnMarca" Grid.Column="0" Grid.Row="1" Margin="5" Click="BtnMarca_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Marca.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Marca</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnModelo" Grid.Column="1" Grid.Row="1" Margin="5" Click="BtnModelo_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Modelo.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Modelo</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnProcesador" Grid.Column="2" Grid.Row="1" Margin="5" Click="BtnProcesador_Click" Visibility="Hidden">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Procesador.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Procesador</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnProveedor" Grid.Column="0" Grid.Row="2" Margin="5" Click="BtnProveedor_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Proveedor.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Proveedor</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnContacto" Grid.Column="1" Grid.Row="2" Margin="5" Click="BtnContacto_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Contacto.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Contacto</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnAplicacion" Grid.Column="2" Grid.Row="2" Margin="5" Click="BtnAplicacion_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Instancias.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Aplicación</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnOperativo" Grid.Column="3" Grid.Row="2" Margin="5" Click="BtnOperativo_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Operativo.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Sistema Operativo</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnEdificio" Grid.Column="0" Grid.Row="3" Margin="5" Click="BtnEdificio_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Edificio.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Edificio</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnRack" Grid.Column="1" Grid.Row="3" Margin="5" Click="BtnRack_Click">
+                        <StackPanel>
+                            <Image Source="/GCISApp;component/Images/Rack.png" Height="70"></Image>
+                            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Rack</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Status" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/StatusPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Tipo" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/TipoPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Marca" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/MarcaPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Modelo" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/ModeloPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Procesador" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/AmbientePage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Proveedor" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/ProveedorPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Contacto" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/ContactoPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Aplicación" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/AplicacionPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Sistema Operativo" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/SistemaOperativoPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Edificio" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/EdificioPage.xaml"></Frame>
+            </TabItem>
+            <TabItem Header="Rack" Visibility="Collapsed">
+                <Frame Source="/GCISApp;component/Pages/RackPage.xaml"></Frame>
+            </TabItem>
+            
+        </TabControl>
+    </Grid>
+</Page>
