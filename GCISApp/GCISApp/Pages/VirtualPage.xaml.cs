@@ -1556,5 +1556,10 @@ namespace GCISApp
         {
 
         }
+
+        private void TabVirtual_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
